@@ -1,198 +1,171 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Johan Piechaczyk - Monteur et Vidéaste</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Johan Piechaczyk – Monteur & Vidéaste</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Space Grotesk', sans-serif;
-      background-color: #f5f3ef;
-      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-      background-repeat: repeat;
-      color: #111;
+    background-color: #f5f3ef;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    background-repeat: repeat;
+    font-family: 'Space Grotesk', sans-serif;
     }
 
     body::after {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-      background: url('https://grainy-gradients.vercel.app/noise.svg');
-      opacity: 0.15;
-      z-index: 1;
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  background: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.15;
+  z-index: 1000;
     }
 
     header {
-      background: #000;
-      color: #fff;
       text-align: center;
-      padding: 3rem 1rem;
-      font-size: 2.2rem;
+      padding: 2rem 1rem;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      position: relative;
-      z-index: 10;
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-      z-index: 10;
-      position: relative;
-    }
-
-    nav a {
-      color: #000;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      border-bottom: 1px solid #000;
     }
 
     main {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-      position: relative;
-      z-index: 10;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
     }
 
-    .projects {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      gap: 3rem;
     }
 
     .project {
       position: relative;
-      border: 2px solid #000;
-      background: #fff;
-      padding: 1rem;
-      overflow: hidden;
     }
 
     .project iframe {
       width: 100%;
-      height: 180px;
+      height: 200px;
       border: none;
+      background: #000;
     }
 
     .project-title {
-      margin-top: 0.5rem;
+      margin: 1rem 0 0.5rem;
       font-size: 1.1rem;
-      font-weight: 600;
       text-transform: uppercase;
-      cursor: pointer;
+      letter-spacing: 1px;
       position: relative;
-      z-index: 5;
+      display: inline-block;
+      cursor: pointer;
+      transition: background 0.2s;
     }
 
-    .project-title:hover + .project-desc {
-      opacity: 1;
+    .project-title:hover {
+      background: #ffe24d;
     }
 
     .project-desc {
-      font-size: 0.9rem;
       opacity: 0;
-      transition: opacity 0.3s ease;
-      margin-top: 0.3rem;
-      line-height: 1.4;
-      color: #444;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.3s ease, max-height 0.3s ease;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .project:hover .project-desc {
+      opacity: 1;
+      max-height: 200px;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.85rem;
-      border-top: 2px solid #000;
+      border-top: 1px solid #000;
       margin-top: 4rem;
-      background: #f5f3ef;
-      z-index: 10;
-      position: relative;
     }
   </style>
 </head>
 <body>
+
   <header>
-    Johan Piechaczyk — Monteur & Vidéaste
+    Johan Piechaczyk – Monteur & Vidéaste
   </header>
 
-  <nav>
-    <a href="#projets">Projets</a>
-    <a href="mailto:johan.piechaczyk@gmail.com">Contact</a>
-  </nav>
-
   <main>
-    <section class="projects" id="projets">
+    <div class="grid">
+
       <div class="project">
         <iframe src="https://www.youtube.com/embed/3uaeDj4sJ50" allowfullscreen></iframe>
-        <div class="project-title">Clip : Emptiness – Möbius 99</div>
-        <div class="project-desc">Description à venir.</div>
+        <div class="project-title">Emptiness – Möbius 99</div>
+        <div class="project-desc"> Clip réalisé début 2025 dans un festival d'artistes émergents, mêlant prise de vue réelle et animation 2D à la main.</div>
       </div>
 
       <div class="project">
         <iframe src="https://www.youtube.com/embed/Su6EMZQ8pmQ" allowfullscreen></iframe>
-        <div class="project-title">Fiction : MOTUS</div>
-        <div class="project-desc">Description à venir.</div>
+        <div class="project-title"> MÖTUS</div>
+        <div class="project-desc">Court-métrage 16mm plein d’intrigues, tant formelles que narratives, monté pour Aya Nour en 2024.</div>
       </div>
 
       <div class="project">
         <iframe src="https://www.youtube.com/embed/Q_nGc7eKlak" allowfullscreen></iframe>
-        <div class="project-title">JOSEPH – Court-métrage (2017)</div>
-        <div class="project-desc">Description à venir.</div>
+        <div class="project-title">JOSEPH </div>
+        <div class="project-desc">Faux documentaire sur un lycéen autiste co-réalisé et interprété en 2017.</div>
       </div>
 
       <div class="project">
         <iframe src="https://www.youtube.com/embed/AqY6-jpOzWg" allowfullscreen></iframe>
-        <div class="project-title">Passer la bague au doigt (48HFP – 2020)</div>
-        <div class="project-desc">Description à venir.</div>
+        <div class="project-title">Passer la bague au doigt </div>
+        <div class="project-desc">Court-métrage style comédie noire réalisé en 48h (de A à Z) en 2020.</div>
       </div>
 
       <div class="project">
         <iframe src="https://www.youtube.com/embed/oBiadeiBJgU" allowfullscreen></iframe>
         <div class="project-title">OSMOZ x Jan Vercauteren – L'UBU (2021)</div>
-        <div class="project-desc">Description à venir.</div>
+        <div class="project-desc">Aftermovie d'une soirée mémorable réalisé pour le collectif Osmoz en 2021.</div>
       </div>
 
       <div class="project">
         <iframe src="https://www.youtube.com/embed/LEy8tQkBOIs" allowfullscreen></iframe>
-        <div class="project-title">OSMOZ x Charlie Sparks – L'UBU (2022)</div>
-        <div class="project-desc">Description à venir.</div>
+        <div class="project-title">OSMOZ x Charlie Sparks </div>
+        <div class="project-desc">Aftermovie d'une soirée endiablée réalisé pour le collectif Osmoz en 2022.</div>
       </div>
 
       <div class="project">
         <iframe src="https://www.youtube.com/embed/QaRnt0yFo0E" allowfullscreen></iframe>
-        <div class="project-title">LA NUIT INTENFESTIVE FESTIVAL</div>
-        <div class="project-desc">Description à venir.</div>
+        <div class="project-title">LA NUIT INTENFESTIVE </div>
+        <div class="project-desc">Aftermovie réalisé pour un festival de musiques alternatives en 2022.</div>
       </div>
 
       <div class="project">
         <iframe src="https://www.youtube.com/embed/4hInw9zAsKE" allowfullscreen></iframe>
         <div class="project-title">AMANDE – 3e Verre</div>
-        <div class="project-desc">Description à venir.</div>
+        <div class="project-desc">Clip style pop monté en 2024.</div>
       </div>
 
       <div class="project">
         <iframe src="https://www.youtube.com/embed/Q0bcskQNxRw" allowfullscreen></iframe>
-        <div class="project-title">Erato #4 – Djinn – Mondo Bizarro (2018)</div>
-        <div class="project-desc">Description à venir.</div>
+        <div class="project-title">Erato #4 – Djinn – Mondo Bizarro </div>
+        <div class="project-desc">Atfermovie réalisé pour le groupe de rock Djinn en 2018.</div>
       </div>
 
       <div class="project">
         <iframe src="https://www.youtube.com/embed/A1EiyOX0KRY" allowfullscreen></iframe>
-        <div class="project-title">Grossophobie – Documentaire (2019)</div>
-        <div class="project-desc">Description à venir.</div>
+        <div class="project-title">Grossophobie – Documentaire </div>
+        <div class="project-desc">Documentaire co-réalisé et monté à la fac en 2019.</div>
       </div>
 
       <div class="project">
         <iframe src="https://www.youtube.com/embed/NVx7YNJA0EA" allowfullscreen></iframe>
-        <div class="project-title">Fabrice Moreau – Teaser Jazz à l'Étage (2019)</div>
-        <div class="project-desc">Description à venir.</div>
+        <div class="project-title">Fabrice Moreau – Teaser Jazz à l'Étage </div>
+        <div class="project-desc">Atfermovie réalisé pour un concert jazz à Rennes en 2019.</div>
       </div>
     </section>
   </main>
