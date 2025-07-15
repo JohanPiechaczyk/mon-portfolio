@@ -5,12 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Johan Piechaczyk - Monteur et Vidéaste</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Courier New', monospace;
-      background-color: #fefefe;
-      color: #111;
-      line-height: 1.6;
+   body {
+  /* police moderne via Google Fonts */
+  font-family: 'Inter', sans-serif;
+  /* texture papier + grain par superposition */
+  background:
+    url('https://www.transparenttextures.com/patterns/asfalt-light.png') repeat,
+    #fefefe; /* couleur de base */
+}
+
+/* superposition grain */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: url('https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif');
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  z-index: 9999;
+}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
     }
     header {
       background: #000;
@@ -81,13 +97,13 @@
 
       <div class="project">
         <h3>Clip : "Emptiness - Möbius 99"</h3>
-        <iframe src="https://www.youtube.com/watch?v=3uaeDj4sJ50&list=PL1rfPSGQEawWi7Jt4slsH_iUjL-VkAtb_"></iframe>
+        <iframe src="https://www.youtube.com/embed/3uaeDj4sJ50"></iframe>
         <p>Réalisé début 2025 dans le cadre d'un festival de clip émérgent, mêlant prise de vue réelle et animation 2D à la main.  </p>
       </div>
 
       <div class="project">
         <h3>Fiction : "MOTUS"</h3>
-        <iframe src="https://www.youtube.com/watch?v=Su6EMZQ8pmQ"></iframe>
+        <iframe src="https://www.youtube.com/embed/Su6EMZQ8pmQ"></iframe>
         <p>Court-métrage artisanal plein d'intrigues monté pour Aya Nour en 2024. </p>
       </div>
 
