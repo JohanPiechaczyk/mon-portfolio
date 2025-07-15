@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monteur & Vidéaste - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #fefefe;
+      color: #111;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 3rem;
+      border-bottom: 2px solid #000;
+      display: inline-block;
+    }
+    .bio {
+      margin-top: 1rem;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project {
+      border: 2px solid #000;
+      padding: 1rem;
+      background-color: #fff;
+    }
+    .project h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+    }
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      border-top: 2px solid #000;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Monteur & Vidéaste — Portfolio
+  </header>
+
+  <main>
+    <section class="bio">
+      <h2>À propos</h2>
+      <p>Je suis un monteur et vidéaste passionné par la fiction, avec une approche artisanale de l'image. Je travaille aussi parfois sur des formats documentaires, toujours avec une attention particulière au rythme et à la narration.</p>
+    </section>
+
+    <section class="projects">
+      <h2>Projets</h2>
+
+      <div class="project">
+        <h3>Fiction : "La Traversée"</h3>
+        <iframe src="https://player.vimeo.com/video/000000000"></iframe>
+        <p>Un court-métrage explorant la mémoire et la perte, monté en 2023.</p>
+      </div>
+
+      <div class="project">
+        <h3>Documentaire : "Sur les toits"</h3>
+        <iframe src="https://www.youtube.com/embed/0000000000"></iframe>
+        <p>Regard documentaire sur les habitants d'immeubles à Paris. Montage rythmé, narration discrète.</p>
+      </div>
+
+      <!-- Tu peux dupliquer ce bloc pour d'autres projets -->
+
+    </section>
+  </main>
+
+  <footer>
+    © 2025 - Portfolio personnel. Contact : monmail@example.com
+  </footer>
+</body>
+</html>
