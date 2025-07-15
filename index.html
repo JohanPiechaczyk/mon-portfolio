@@ -1,135 +1,204 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Johan Piechaczyk – Monteur & Vidéaste</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Johan Piechaczyk - Monteur et Vidéaste</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Space Grotesk', sans-serif;
-      background: #f8f7f4 url('https://www.transparenttextures.com/patterns/fabric-of-squares.png') repeat;
+      background-color: #f5f3ef;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      background-repeat: repeat;
       color: #111;
     }
 
     body::after {
-      content: '';
+      content: "";
       position: fixed;
-      inset: 0;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       pointer-events: none;
-      background: url('https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif') repeat;
-      opacity: 0.06;
-      mix-blend-mode: overlay;
-      z-index: 9999;
+      background: url('https://grainy-gradients.vercel.app/noise.svg');
+      opacity: 0.15;
+      z-index: 1;
     }
 
     header {
+      background: #000;
+      color: #fff;
       text-align: center;
-      padding: 2rem 1rem;
-      font-size: 1.2rem;
-      letter-spacing: 2px;
+      padding: 3rem 1rem;
+      font-size: 2.2rem;
       text-transform: uppercase;
-      border-bottom: 1px solid #000;
+      letter-spacing: 1.5px;
+      position: relative;
+      z-index: 10;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+      z-index: 10;
+      position: relative;
+    }
+
+    nav a {
+      color: #000;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      position: relative;
+      z-index: 10;
     }
 
-    .grid {
+    .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
+      gap: 2rem;
     }
 
     .project {
       position: relative;
+      border: 2px solid #000;
+      background: #fff;
+      padding: 1rem;
+      overflow: hidden;
     }
 
     .project iframe {
       width: 100%;
-      height: 200px;
+      height: 180px;
       border: none;
-      background: #000;
     }
 
     .project-title {
-      margin: 1rem 0 0.5rem;
+      margin-top: 0.5rem;
       font-size: 1.1rem;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      position: relative;
-      display: inline-block;
       cursor: pointer;
-      transition: background 0.2s;
+      position: relative;
+      z-index: 5;
     }
 
-    .project-title:hover {
-      background: #ffe24d;
+    .project-title:hover + .project-desc {
+      opacity: 1;
     }
 
     .project-desc {
+      font-size: 0.9rem;
       opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: opacity 0.3s ease, max-height 0.3s ease;
-      font-size: 0.95rem;
-      margin-top: 0.5rem;
-    }
-
-    .project:hover .project-desc {
-      opacity: 1;
-      max-height: 200px;
+      transition: opacity 0.3s ease;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+      color: #444;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.85rem;
-      border-top: 1px solid #000;
+      border-top: 2px solid #000;
       margin-top: 4rem;
+      background: #f5f3ef;
+      z-index: 10;
+      position: relative;
     }
   </style>
 </head>
 <body>
-
   <header>
-    Johan Piechaczyk – Monteur & Vidéaste
+    Johan Piechaczyk — Monteur & Vidéaste
   </header>
 
-  <main>
-    <div class="grid">
+  <nav>
+    <a href="#projets">Projets</a>
+    <a href="mailto:johan.piechaczyk@gmail.com">Contact</a>
+  </nav>
 
+  <main>
+    <section class="projects" id="projets">
       <div class="project">
         <iframe src="https://www.youtube.com/embed/3uaeDj4sJ50" allowfullscreen></iframe>
         <div class="project-title">Clip : Emptiness – Möbius 99</div>
-        <div class="project-desc">Réalisé début 2025 dans un festival émergent, mêlant prise de vue réelle et animation 2D à la main.</div>
+        <div class="project-desc">Description à venir.</div>
       </div>
 
       <div class="project">
         <iframe src="https://www.youtube.com/embed/Su6EMZQ8pmQ" allowfullscreen></iframe>
         <div class="project-title">Fiction : MOTUS</div>
-        <div class="project-desc">Court-métrage artisanal plein d’intrigues, monté pour Aya Nour en 2024.</div>
+        <div class="project-desc">Description à venir.</div>
       </div>
 
-      <!-- Tu peux dupliquer ce bloc pour d'autres projets -->
-      <!-- Exemple :
       <div class="project">
-        <iframe src="https://www.youtube.com/embed/ID_DE_LA_VIDEO" allowfullscreen></iframe>
-        <div class="project-title">Titre du projet</div>
-        <div class="project-desc">Brève description du projet</div>
+        <iframe src="https://www.youtube.com/embed/Q_nGc7eKlak" allowfullscreen></iframe>
+        <div class="project-title">JOSEPH – Court-métrage (2017)</div>
+        <div class="project-desc">Description à venir.</div>
       </div>
-      -->
 
-    </div>
+      <div class="project">
+        <iframe src="https://www.youtube.com/embed/AqY6-jpOzWg" allowfullscreen></iframe>
+        <div class="project-title">Passer la bague au doigt (48HFP – 2020)</div>
+        <div class="project-desc">Description à venir.</div>
+      </div>
+
+      <div class="project">
+        <iframe src="https://www.youtube.com/embed/oBiadeiBJgU" allowfullscreen></iframe>
+        <div class="project-title">OSMOZ x Jan Vercauteren – L'UBU (2021)</div>
+        <div class="project-desc">Description à venir.</div>
+      </div>
+
+      <div class="project">
+        <iframe src="https://www.youtube.com/embed/LEy8tQkBOIs" allowfullscreen></iframe>
+        <div class="project-title">OSMOZ x Charlie Sparks – L'UBU (2022)</div>
+        <div class="project-desc">Description à venir.</div>
+      </div>
+
+      <div class="project">
+        <iframe src="https://www.youtube.com/embed/QaRnt0yFo0E" allowfullscreen></iframe>
+        <div class="project-title">LA NUIT INTENFESTIVE FESTIVAL</div>
+        <div class="project-desc">Description à venir.</div>
+      </div>
+
+      <div class="project">
+        <iframe src="https://www.youtube.com/embed/4hInw9zAsKE" allowfullscreen></iframe>
+        <div class="project-title">AMANDE – 3e Verre</div>
+        <div class="project-desc">Description à venir.</div>
+      </div>
+
+      <div class="project">
+        <iframe src="https://www.youtube.com/embed/Q0bcskQNxRw" allowfullscreen></iframe>
+        <div class="project-title">Erato #4 – Djinn – Mondo Bizarro (2018)</div>
+        <div class="project-desc">Description à venir.</div>
+      </div>
+
+      <div class="project">
+        <iframe src="https://www.youtube.com/embed/A1EiyOX0KRY" allowfullscreen></iframe>
+        <div class="project-title">Grossophobie – Documentaire (2019)</div>
+        <div class="project-desc">Description à venir.</div>
+      </div>
+
+      <div class="project">
+        <iframe src="https://www.youtube.com/embed/NVx7YNJA0EA" allowfullscreen></iframe>
+        <div class="project-title">Fabrice Moreau – Teaser Jazz à l'Étage (2019)</div>
+        <div class="project-desc">Description à venir.</div>
+      </div>
+    </section>
   </main>
 
   <footer>
-    © 2025 – Contact : johan.piechaczyk@gmail.com
+    © 2025 - Portfolio de Johan Piechaczyk. Contact : johan.piechaczyk@gmail.com
   </footer>
-
 </body>
 </html>
