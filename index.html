@@ -1,119 +1,135 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Johan Piechaczyk - Monteur et Vidéaste</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Johan Piechaczyk – Monteur & Vidéaste</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
   <style>
-   body {
-  /* police moderne via Google Fonts */
-  font-family: 'Inter', sans-serif;
-  /* texture papier + grain par superposition */
-  background:
-    url('https://www.transparenttextures.com/patterns/asfalt-light.png') repeat,
-    #fefefe; /* couleur de base */
-}
-
-/* superposition grain */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: url('https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif');
-  opacity: 0.05;
-  mix-blend-mode: overlay;
-  z-index: 9999;
-}
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      background: #f8f7f4 url('https://www.transparenttextures.com/patterns/fabric-of-squares.png') repeat;
+      color: #111;
     }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: url('https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif') repeat;
+      opacity: 0.06;
+      mix-blend-mode: overlay;
+      z-index: 9999;
+    }
+
     header {
-      background: #000;
-      color: #fff;
-      padding: 3rem 1rem;
       text-align: center;
-      font-size: 2rem;
-      text-transform: uppercase;
+      padding: 2rem 1rem;
+      font-size: 1.2rem;
       letter-spacing: 2px;
-    }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 3rem;
-      border-bottom: 2px solid #000;
-      display: inline-block;
-    }
-    .bio {
-      margin-top: 1rem;
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .project {
-      border: 2px solid #000;
-      padding: 1rem;
-      background-color: #fff;
-    }
-    .project h3 {
-      margin-top: 0;
-      font-size: 1.1rem;
       text-transform: uppercase;
+      border-bottom: 1px solid #000;
     }
-    iframe {
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+
+    .project {
+      position: relative;
+    }
+
+    .project iframe {
       width: 100%;
       height: 200px;
       border: none;
+      background: #000;
     }
+
+    .project-title {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .project-title:hover {
+      background: #ffe24d;
+    }
+
+    .project-desc {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.3s ease, max-height 0.3s ease;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .project:hover .project-desc {
+      opacity: 1;
+      max-height: 200px;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
-      font-size: 0.9rem;
-      border-top: 2px solid #000;
+      font-size: 0.85rem;
+      border-top: 1px solid #000;
       margin-top: 4rem;
     }
   </style>
 </head>
 <body>
+
   <header>
-    Monteur & Vidéaste — Portfolio
+    Johan Piechaczyk – Monteur & Vidéaste
   </header>
 
   <main>
-    <section class="bio">
-      <h2>À propos</h2>
-      <p>Je suis un monteur et vidéaste passionné par la fiction, avec une approche artisanale de l'image. Je travaille aussi parfois sur des formats documentaires, toujours avec une attention particulière au rythme et à la narration.</p>
-    </section>
-
-    <section class="projects">
-      <h2>Projets</h2>
+    <div class="grid">
 
       <div class="project">
-        <h3>Clip : "Emptiness - Möbius 99"</h3>
-        <iframe src="https://www.youtube.com/embed/3uaeDj4sJ50"></iframe>
-        <p>Réalisé début 2025 dans le cadre d'un festival de clip émérgent, mêlant prise de vue réelle et animation 2D à la main.  </p>
+        <iframe src="https://www.youtube.com/embed/3uaeDj4sJ50" allowfullscreen></iframe>
+        <div class="project-title">Clip : Emptiness – Möbius 99</div>
+        <div class="project-desc">Réalisé début 2025 dans un festival émergent, mêlant prise de vue réelle et animation 2D à la main.</div>
       </div>
 
       <div class="project">
-        <h3>Fiction : "MOTUS"</h3>
-        <iframe src="https://www.youtube.com/embed/Su6EMZQ8pmQ"></iframe>
-        <p>Court-métrage artisanal plein d'intrigues monté pour Aya Nour en 2024. </p>
+        <iframe src="https://www.youtube.com/embed/Su6EMZQ8pmQ" allowfullscreen></iframe>
+        <div class="project-title">Fiction : MOTUS</div>
+        <div class="project-desc">Court-métrage artisanal plein d’intrigues, monté pour Aya Nour en 2024.</div>
       </div>
 
       <!-- Tu peux dupliquer ce bloc pour d'autres projets -->
+      <!-- Exemple :
+      <div class="project">
+        <iframe src="https://www.youtube.com/embed/ID_DE_LA_VIDEO" allowfullscreen></iframe>
+        <div class="project-title">Titre du projet</div>
+        <div class="project-desc">Brève description du projet</div>
+      </div>
+      -->
 
-    </section>
+    </div>
   </main>
 
   <footer>
-    © 2025 - Portfolio personnel. Contact : johan.piechaczyk@gmail.com
+    © 2025 – Contact : johan.piechaczyk@gmail.com
   </footer>
+
 </body>
 </html>
